@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ComplaintController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +20,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('/complaint',ComplaintController::class);
+Route::resource('/feedback',FeedbackController::class);
 
 require __DIR__.'/auth.php';
